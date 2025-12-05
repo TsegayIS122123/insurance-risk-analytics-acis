@@ -203,3 +203,92 @@ pip install -r requirements.txt
 - **Risk Category Distribution**: Breakdown of Low/Medium/High/Unknown risk
 - **Geographic Analysis**: Loss Ratio by Province
 
+## 🔄 Task 2: Data Version Control with DVC 
+
+### Why DVC?
+- **Large Data File**: 503 MB insurance data exceeds GitHub's 100 MB limit
+- **Version Control**: Track data changes alongside code
+- **Reproducibility**: Ensure consistent analysis results
+- **Storage Efficiency**: Store data separately from code repository
+
+### DVC Setup Instructions
+
+#### 1. Install DVC
+```bash
+pip install dvc
+```
+# Initialize DVC
+dvc init
+###  Objectives Achieved
+- [x] Install and configure DVC
+- [x] Set up local remote storage
+- [x] Add large data file to DVC tracking
+- [x] Commit .dvc pointer files to Git
+- [x] Push data to DVC remote storage
+- [x] Create sample data for testing
+- [x] Document DVC setup in README
+
+### 🎯 Solution to Data Size Problem
+**Problem**: Data file (503 MB) exceeds GitHub's 100 MB limit
+**Solution**: DVC manages large files outside Git repository
+
+### 🛠️ Implementation
+- **DVC Setup**: Initialized with local storage at `C:\Users\HP\Desktop\dvc-storage`
+- **Data Management**: Full dataset tracked by DVC, sample in Git
+- **Configuration**: Flexible data source selection (`config/dvc_config.py`)
+- **Documentation**: Complete setup instructions in README
+
+# Pipeline Implementation
+
+## 🎯 Objective
+Establish reproducible and auditable data pipeline using DVC for insurance risk analytics.
+
+## 🔧 What Was Implemented
+
+### 1. **DVC Initialization & Configuration**
+-  DVC initialized with `.dvc/` directory
+- Local storage configured at `C:/Users/HP/Desktop/dvc-storage/`
+- Data file tracked via DVC (503MB insurance dataset)
+
+### 2. **Complete DVC Pipeline** (`dvc.yaml`)
+The pipeline for insurance analytics:
+
+#### **Data Validation**
+- Validates dataset structure and quality
+- Checks for missing values and duplicates
+
+## 📊 Key Features
+
+### **Reproducibility**
+- Complete pipeline with `dvc repro`
+- Version-controlled data and code
+- Auditable analysis trail
+
+### **Insurance-Specific**
+- Correct pipe delimiter handling for dataset
+- Insurance KPI calculations
+- Business-ready reporting
+
+### **Compliance**
+- Data version control for regulatory requirements
+- Audit trail for insurance analytics
+- Reproducible results for stakeholders
+
+### What was accomplished:
+-  **DVC Pipeline Setup**: Created reproducible data processing pipeline
+-  **Data Processing**: Processed 1,000,099 insurance records
+-  **Business Insights Generated**:
+  - Overall claim rate: 0.28%
+  - Average claim amount: R23,273.39
+  - 61.5% of policies are profitable
+  - Premium ratio for claims vs no-claims: 7.5x
+-  **Output Files**:
+  - `data/processed.csv` (533MB, 56 columns)
+  - `data/eda_summary.txt` (key statistics)
+-  **DVC Tracking**: All data files version controlled
+
+### Critical Findings:
+1. **Data Quality Issues**: Several columns have high missing values (up to 100%)
+2. **Risk Distribution**: 61.5% low risk, 0.3% high risk policies
+3. **Profitability**: Majority of policies profitable despite some high claims
+
