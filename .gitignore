@@ -31,14 +31,14 @@ Thumbs.db
 .env
 .env.local
 
-# ========== DATA FILES (DVC will track) ==========
-# DVC will manage these, so we don't ignore them here
-# Instead, DVC will create its own .dvcignore file
+# ========== DATA FILES (DVC will handle these) ==========
+# Don't ignore data/ directory - DVC needs to track it
+# DVC will create its own ignores in data/.gitignore
 
 # ========== LOGS ==========
 *.log
 logs/
 
-
-
-
+# ========== DVC CACHE ==========
+.dvc/tmp
+.dvc/cache
