@@ -1,4 +1,4 @@
 [core]
     remote = localstorage
 ['remote "localstorage"']
-    url = ../UsersHPDesktopdvc-storage
+    url = C:/Users/HP/Desktop/dvc-storage
