@@ -1,36 +1,44 @@
-# Virtual environments
+# ========== VIRTUAL ENVIRONMENTS ==========
 .venv/
 venv/
 env/
 
-# Python
+# ========== PYTHON ==========
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
 
-# IDE
+# ========== IDE & EDITOR ==========
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# OS
+# ========== JUPYTER ==========
+.ipynb_checkpoints/
+
+# ========== OS ==========
 .DS_Store
 Thumbs.db
 
-# Data files
-*.csv
-*.json
-*.log
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Environment variables
+# ========== ENVIRONMENT VARIABLES ==========
 .env
+.env.local
 
-data/
-*.txt
-*.csv
-*.json
+# ========== DATA FILES (DVC will track) ==========
+# DVC will manage these, so we don't ignore them here
+# Instead, DVC will create its own .dvcignore file
+
+# ========== LOGS ==========
+*.log
+logs/
+
+
+
+
