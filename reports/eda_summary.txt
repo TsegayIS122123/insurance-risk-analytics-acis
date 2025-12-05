@@ -1,0 +1,7 @@
+INSURANCE DATA EDA SUMMARY
+============================================================
+Rows: 1,000,099
+Columns: 52
+Numerical Columns: 11
+Categorical Columns: 39
+Average Loss Ratio: 0.350
