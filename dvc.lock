@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  process:
+    cmd: python scripts/run_eda.py
+    deps:
+    - path: data/MachineLearningRating_v3.txt
+      hash: md5
+      md5: f6b7009b68ae21372b7deca9307fbb23
+      size: 529363713
+    - path: scripts/run_eda.py
+      hash: md5
+      md5: cbe287cc8684de14b4941329de80c73a
+      size: 10527
+    outs:
+    - path: data/eda_summary.txt
+      hash: md5
+      md5: d0efeccd4575a6778b59f0dab5c6b26f
+      size: 195
+    - path: data/processed.csv
+      hash: md5
+      md5: d0090790d89a5d3582dd7c2fa8897914
+      size: 546150481

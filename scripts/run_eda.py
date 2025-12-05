@@ -78,7 +78,7 @@ def main():
     df = processor.load_data(delimiter='|')
     
     if df is None or len(df) == 0:
-        print("❌ Could not load data with pipe delimiter.")
+        print(" Could not load data with pipe delimiter.")
         print("   Trying other delimiters...")
         # Fall back to other delimiters
         delimiters = ['\t', ',', ';']
@@ -87,10 +87,10 @@ def main():
                 print(f"\n🔍 Trying delimiter: {repr(delimiter)}")
                 df = processor.load_data(delimiter=delimiter)
                 if df is not None and len(df) > 0:
-                    print(f"✅ Successfully loaded data with delimiter {repr(delimiter)}")
+                    print(f" Successfully loaded data with delimiter {repr(delimiter)}")
                     break
             except Exception as e:
-                print(f"❌ Failed with delimiter {repr(delimiter)}: {e}")
+                print(f" Failed with delimiter {repr(delimiter)}: {e}")
                 continue
     
     if df is None or len(df) == 0:
@@ -232,7 +232,7 @@ def main():
     print("="*60)
     
     # Save summary to file
-    summary_path = project_root / "reports" / "eda_summary.txt"
+    summary_path = project_root / "data" / "eda_summary.txt"
     summary_path.parent.mkdir(exist_ok=True)
     
     with open(summary_path, 'w') as f:
@@ -246,6 +246,20 @@ def main():
             f.write(f"Average Loss Ratio: {processor.df['LossRatio'].mean():.3f}\n")
     
     print(f"\n📄 Summary saved to: {summary_path}")
+    
+    print("\n💾 SAVING DATA...")
+
+    # Save processed data as CSV
+    save_path = project_root / "data" / "processed.csv"
+    processor.df.to_csv(save_path, index=False)
+
+    print(f" Processed data saved to: {save_path}")
+    print(f"📊 Shape: {processor.df.shape}")
+    print(f"💿 Size: {save_path.stat().st_size / 1024:.1f} KB")
+
+    # Optional: Print a few sample rows
+    print("\n📋 Sample data (first 3 rows):")
+    print(processor.df.head(3))
     
     return processor.df
 

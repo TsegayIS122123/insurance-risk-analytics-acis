@@ -1,0 +1,9 @@
+stages:
+  process:
+    cmd: python scripts/run_eda.py
+    deps:
+      - data/MachineLearningRating_v3.txt
+      - scripts/run_eda.py
+    outs:
+      - data/processed.csv
+      - data/eda_summary.txt
