@@ -230,7 +230,7 @@ class InsuranceHypothesisTester:
         top_zips = zip_counts.head(top_n).index.tolist()
         
         if len(top_zips) < 2:
-            print(f"⚠️ Not enough zip codes with data")
+            print(f" Not enough zip codes with data")
             return None
         
         df_zip = self.data[self.data['PostalCode_Clean'].isin(top_zips)].copy()
@@ -305,7 +305,7 @@ class InsuranceHypothesisTester:
         print("="*70)
         
         if 'PostalCode' not in self.data.columns or 'ProfitMargin' not in self.data.columns:
-            print("❌ Required columns not found")
+            print(" Required columns not found")
             return None
         
         # Clean postal codes
@@ -601,9 +601,4 @@ class InsuranceHypothesisTester:
         
         report_text = "\n".join(report_lines)
         
-        # Save to file
-        with open('data/hypothesis_testing_report.txt', 'w') as f:
-            f.write(report_text)
-        
-        print(f"📄 Report saved to:data/ hypothesis_testing_report.txt")
         return report_text
