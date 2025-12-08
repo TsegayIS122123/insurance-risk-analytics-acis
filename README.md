@@ -364,19 +364,6 @@ Statistical Result: No significance in frequency (p = 1.000) or severity (p = 0.
 - Gender Risk	Claim Severity	Mann-Whitney U Test	Non-parametric, skewed data
 - Data Preparation Process
 
-# Statistical Testing Framework
-Significance Level (α): 0.05 (95% confidence level)
-
-Sample Size Consideration: Minimum 100 policies per group for reliable testing
-
-Multiple Testing Correction: Applied where applicable
-
-Assumption Checking: Verified test assumptions before application
-
-📈 Key Business Insights & Recommendations
-🚨 CRITICAL FINDINGS
-1. Geographic Risk Concentration is REAL
-
 # PROVINCE RISK HIERARCHY (Highest to Lowest):
 1. Gauteng → 0.3356% claim rate (HIGHEST RISK)
 2. KwaZulu-Natal → 0.2845% claim rate
@@ -424,3 +411,63 @@ Action 3: Risk Assessment Enhancement
 - Geographic Pricing	8-12% loss ratio improvement	6 months	Loss Ratio < 85%
 - Targeted Marketing	15% acquisition cost reduction	3 months	CAC decrease by R150
 - Risk Assessment	25% reduction in high-risk policies	12 months	High-risk policies < 0.2%
+
+### **📊 Statistical Results Overview**
+| Hypothesis | Decision | p-value | Business Significance |
+|------------|----------|---------|----------------------|
+| Province Risk Differences | **REJECT H₀** | 5.93e-19 |  **High Impact** |
+| Zip Code Risk Differences | **REJECT H₀** | ≈0 |  **High Impact** |
+| Zip Code Profit Differences | **REJECT H₀** | ≈0 |  **High Impact** |
+| Gender Risk Differences | **FAIL TO REJECT H₀** | 1.000 |  **Compliance Confirmed** |
+
+### **💡 Key Business Insights**
+
+#### **🚨 Critical Findings**
+1. **Geographic Risk Concentration**
+   - Gauteng has 0.3356% claim rate (highest risk)
+   - 25-40% higher risk than other provinces
+   - Statistical significance: p < 0.00001
+
+2. **Micro-Geographic Profitability**
+   - Zip 400: R38.81 average profit (most profitable)
+   - Zip 1863: R-100.57 average loss (least profitable)
+   - Profit gap: R139.38 between extremes
+
+3. **Gender Neutrality**
+   - Male: 0.2195% claim rate (94/42,817)
+   - Female: 0.2073% claim rate (14/6,755)
+   - No statistical significance (p = 1.000)
+
+### **🎯 Actionable Recommendations**
+
+#### **Immediate Actions (0-3 Months)**
+- **Premium Adjustments**: 
+  - Gauteng: +15-20% premium increase
+  - Low-risk provinces: -5-10% discount
+  - Expected impact: 8-12% loss ratio improvement
+
+- **Targeted Marketing**:
+  - Focus on profitable zip codes (400, 152, 299)
+  - Reduce acquisition in loss-making areas (1863)
+  - Launch "Safe Driver Zones" campaign
+
+#### **Strategic Initiatives (3-12 Months)**
+- **Risk Assessment Enhancement**:
+  - Implement geographic risk scoring
+  - Develop real-time risk dashboard
+  - Train agents on risk factors
+
+- **Compliance & Transparency**:
+  - Maintain gender-neutral pricing
+  - Document geographic risk rationale
+  - Prepare regulatory compliance reports
+
+### **📈 Expected Business Impact**
+
+| Metric | Target | Timeline | Success Criteria |
+|--------|--------|----------|------------------|
+| Loss Ratio Improvement | 8-12% | 6 months | Loss Ratio < 85% |
+| Customer Acquisition Cost | 15% reduction | 3 months | CAC decrease by R150 |
+| High-Risk Policy Reduction | 25% reduction | 12 months | High-risk < 0.2% |
+| Overall Profitability | 8-12% increase | 12 months | ROI improvement |
+
