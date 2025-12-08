@@ -292,3 +292,135 @@ The pipeline for insurance analytics:
 2. **Risk Distribution**: 61.5% low risk, 0.3% high risk policies
 3. **Profitability**: Majority of policies profitable despite some high claims
 
+# 📊 TASK 3: HYPOTHESIS TESTING FOR RISK DRIVERS
+# 🎯 Objective
+Statistically validate key risk drivers to form the basis of ACIS's new segmentation and pricing strategy through A/B hypothesis testing.
+
+# 📋 Hypotheses Tested
+#  Province Risk Differences
+- Null Hypothesis (H₀): There are no risk differences across provinces
+
+- Test Results: REJECT H₀ (p = 5.93e-19)
+
+# Key Findings:
+
+- Gauteng: Highest risk province (0.3356% claim rate)
+
+- KwaZulu-Natal: 0.2845% claim rate
+
+- Limpopo: 0.2698% claim rate
+
+- North West: 0.2436% claim rate
+
+Statistical Significance: Confirmed for both claim frequency and severity
+
+# Zip Code Risk Differences
+Null Hypothesis (H₀): There are no risk differences between zip codes
+
+Test Results: REJECT H₀ (p ≈ 0)
+
+# Key Findings:
+
+Zip 1863: Highest risk area (0.5084% claim rate)
+
+Zip 7405: Lowest risk area
+
+Statistical Significance: Micro-geographic risk variations are highly significant
+
+## Zip Code Profit Margin Differences
+Null Hypothesis (H₀): There is no significant margin (profit) difference between zip codes
+
+Test Results: REJECT H₀ (p ≈ 0)
+
+# Key Findings:
+
+Zip 400: Most profitable (R38.81 average profit)
+
+Zip 1863: Least profitable (R-100.57 average loss)
+
+Profit Spread: R139.38 difference between highest and lowest
+
+#  Gender Risk Differences
+Null Hypothesis (H₀): There is no significant risk difference between Women and Men
+
+Test Results: FAIL TO REJECT H₀
+
+# Key Findings:
+
+Male Claim Rate: 0.2195% (94 claims out of 42,817 policies)
+
+Female Claim Rate: 0.2073% (14 claims out of 6,755 policies)
+
+Statistical Result: No significance in frequency (p = 1.000) or severity (p = 0.224)
+
+# 🔬 Statistical Methodology
+# Test Selection Matrix
+- Hypothesis	Metric	Test Used	Statistical Reason
+- Province Risk	Claim Frequency	Chi-square Test	Categorical comparison across groups
+- Province Risk	Claim Severity	ANOVA	Mean comparison across multiple groups
+- Zip Code Risk	Claim Frequency	Chi-square Test	Categorical comparison across groups
+- Zip Code Profit	Profit Margin	Kruskal-Wallis	Non-parametric, handles outliers
+- Gender Risk	Claim Frequency	Fisher's Exact Test	Small sample sizes, rare events
+- Gender Risk	Claim Severity	Mann-Whitney U Test	Non-parametric, skewed data
+- Data Preparation Process
+
+# Statistical Testing Framework
+Significance Level (α): 0.05 (95% confidence level)
+
+Sample Size Consideration: Minimum 100 policies per group for reliable testing
+
+Multiple Testing Correction: Applied where applicable
+
+Assumption Checking: Verified test assumptions before application
+
+📈 Key Business Insights & Recommendations
+🚨 CRITICAL FINDINGS
+1. Geographic Risk Concentration is REAL
+
+# PROVINCE RISK HIERARCHY (Highest to Lowest):
+1. Gauteng → 0.3356% claim rate (HIGHEST RISK)
+2. KwaZulu-Natal → 0.2845% claim rate
+3. Limpopo → 0.2698% claim rate
+4. North West → 0.2436% claim rate
+5. Mpumalanga → 0.2428% claim rate
+2. Micro-Geographic Patterns Emerge
+
+# ZIP CODE EXTREMES:
+• Highest Risk: Zip 1863 (0.5084% claim rate)
+• Lowest Risk: Zip 7405 
+• Most Profitable: Zip 400 (R38.81 average profit)
+• Least Profitable: Zip 1863 (R-100.57 average loss)
+3. Gender is NOT a Significant Risk Factor
+
+# GENDER ANALYSIS RESULTS:
+• Male: 0.2195% claim rate
+• Female: 0.2073% claim rate
+• Difference: Not statistically significant (p = 1.000)
+• Implication: No gender-based pricing differentiation needed
+# 🎯 IMMEDIATE BUSINESS ACTIONS
+Action 1: Geographic Pricing Restructuring
+
+# PROPOSED PREMIUM ADJUSTMENTS:
+• Gauteng Policies: +15-20% premium increase
+• Low-Risk Provinces: -5-10% premium reduction
+• Implementation: Phased rollout over 6 months
+• Expected Impact: 8-12% improvement in loss ratio
+Action 2: Targeted Marketing Strategy
+
+# MARKETING FOCUS AREAS:
+• PRIORITY: Zip codes 400, 152, 299 (most profitable areas)
+• AVOID: Zip code 1863 (high risk, unprofitable)
+• CAMPAIGN: "Safe Driver Zones" for low-risk areas
+• BUDGET: Reallocate 30% of marketing spend to profitable regions
+Action 3: Risk Assessment Enhancement
+
+# UNDERWRITING IMPROVEMENTS:
+1. Add geographic risk scoring to all new policies
+2. Implement real-time risk assessment for zip codes
+3. Create "Risk Heat Maps" for agent training
+4. Develop automated geographic risk alerts
+# 📊 Performance Impact Projections
+- Initiative	Expected Outcome	Timeline	Success Metrics
+- Geographic Pricing	8-12% loss ratio improvement	6 months	Loss Ratio < 85%
+- Targeted Marketing	15% acquisition cost reduction	3 months	CAC decrease by R150
+- Risk Assessment	25% reduction in high-risk policies	12 months	High-risk policies < 0.2%
