@@ -424,3 +424,49 @@ Action 3: Risk Assessment Enhancement
 - Geographic Pricing	8-12% loss ratio improvement	6 months	Loss Ratio < 85%
 - Targeted Marketing	15% acquisition cost reduction	3 months	CAC decrease by R150
 - Risk Assessment	25% reduction in high-risk policies	12 months	High-risk policies < 0.2%
+## 📊 **TASK 4: PREDICTIVE MODELING - COMPLETED**
+
+### **🎯 Objectives Achieved**
+1.  **Claim Severity Prediction**: Built 4 models to predict claim amounts
+2.  **Model Evaluation**: Compared performance using RMSE and R² metrics
+3.  **Feature Importance**: SHAP analysis identified top risk drivers
+4.  **Premium Optimization**: Developed risk-based pricing framework
+5.  **Business Recommendations**: Actionable insights for ACIS strategy
+
+### **📈 Model Performance Results**
+| Model | RMSE | R² Score | Best For |
+|-------|------|----------|----------|
+| Linear Regression | R36,592.17 | 0.1496 | Baseline |
+| **Decision Tree** | **R34,959.91** | **0.2238** | **Best Performance** |
+| Random Forest | R36,546.55 | 0.1517 | Ensemble |
+| XGBoost | R36,237.41 | 0.1669 | Gradient Boosting |
+
+### **🔍 Key Risk Factors Identified**
+1. **SumInsured** (Most Important): Higher insured values → Higher claims
+2. **CalculatedPremiumPerTerm**: Current premiums correlate with risk
+3. **Cubiccapacity**: Larger engines → More expensive repairs
+4. **VehicleAge**: Older vehicles → Higher claim likelihood
+
+### **💰 Critical Business Insight**
+**POLICIES ARE SIGNIFICANTLY OVERPRICED:**
+- Average Current Premium: R117.88
+- Risk-Based Premium: R8.74  
+- **Overpricing: 92.6%** (R109.14 per policy)
+
+### **🎯 Recommended Actions**
+1. **Immediate Pricing Reduction**: 50-70% base premium decrease
+2. **Risk-Based Tiering**: Implement 3-tier pricing structure
+3. **Targeted Marketing**: Focus on low-risk customer acquisition
+4. **Model Deployment**: Integrate Decision Tree model into underwriting
+
+### **📊 Expected Business Impact**
+- **Customer Acquisition**: 200-300% increase with competitive pricing
+- **Loss Ratio Improvement**: Target 70-80% (from current negative)
+- **Profitability**: R5-10 profit per policy (from R-2.96 loss)
+- **Market Share**: 5-10% growth in South African market
+
+### **🚀 Next Steps**
+1. Deploy predictive models to production environment
+2. Implement A/B testing for new pricing model
+3. Monitor model performance with real-time tracking
+4. Expand features with telematics and driving behavior data
